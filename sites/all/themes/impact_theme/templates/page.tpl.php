@@ -132,7 +132,7 @@
 
   <div id="main" class="clearfix">
     <div id="primary">
-      <section id="content" role="main" style="width:90%;">
+      <section id="content" role="main" style="width:96%;">
         <?php if ($is_front): ?>
         <?php if (theme_get_setting('slideshow_display','impact_theme')): ?>
         <?php 
@@ -177,7 +177,12 @@
 <!--MVC-->
 	<?php print render($page['footer']); ?>
 <!--grey brline-->
+<?php if($is_front){
+
+	}else{ ?>
 	<div class="brfooter"></div>
+	
+	<?php }?>
 
 	<?php if ($page['footer_first'] || $page['footer_second'] || $page['footer_third']): ?>
         <div id="footer-block-wrap" class="clearfix in<?php print (bool) $page['footer_first'] + (bool) $page['footer_second'] + (bool) $page['footer_third']; ?>">
@@ -200,7 +205,6 @@
 
  <!--footer end-->
   </footer>
-
 </div>
 <center>
 <div class="footr">
